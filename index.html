@@ -12,11 +12,11 @@
         <h1>Cash Register</h1>
         <p class="description">Enter bill amount and cash given by customer to know change</p>
         
-        <label for ="bill-amount">Bill Amount:</label>
-        <input id="bill-amount" type ="text"/>
+        <label for ="bill-amount"><strong> Amount:</strong></label>
+        <input id="bill-amount" type ="" pattern = "[0-9.]"/>
 
-        <label for ="cash-given">Cash Given:</label>
-        <input id="cash-given" type ="text"/>
+        <label for ="cash-given"><strong>Cash Given:</strong></label>
+        <input id="cash-given" type ="text" pattern = "[0-9.]"/>
 
         <button id="check-button">Check</button>
         <p id="error-message"></p>
@@ -32,6 +32,7 @@
                 <td class="no-of-notes"></td>
                 <td class="no-of-notes"></td>
                 <td class="no-of-notes"></td>
+                <td class="no-of-notes"></td>   
             </tr>
             <tr>
                 <th>Note</th>
@@ -40,6 +41,7 @@
                 <td>100</td>
                 <td>50</td>
                 <td>20</td>
+                <td>10</td>
                 <td>5</td>
                 <td>1</td>
             </tr>
