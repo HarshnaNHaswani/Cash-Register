@@ -10,14 +10,19 @@ checkButton.addEventListener("click", validateBillandCashAmount);
 function validateBillandCashAmount(){
     hideMessage();
     var msg;
-    if(billAmount.value > 0){
-        if(cashGiven.value >= billAmount.value){
-            const amountToBeReturned = cashGiven.value - billAmount.value;
+    let cash = Number(cashGiven.value);
+    let bill = Number(billAmount.value);
+    if(bill > 0){
+        if(cash >= bill){
+            hideMessage();
+            const amountToBeReturned = cash - bill;
             calculateChange(amountToBeReturned);
-        }
-        else{
-            msg ="The cash provided should be greater than or equal to the bill amount";
-            showMessage(msg);
+        }else{
+            noOfNotes.forEach(element => {
+                element.innerText = "";
+            });
+            msg ="The cash provided should be greater than or equal to the bill amount";            
+            showMessage(msg);            
         }
     }
     else{
@@ -36,6 +41,7 @@ function calculateChange(amountToBeReturned){
 
 function hideMessage(){
     message.style.display = "none";
+    message.innerText = "";
 }
 function showMessage(msg){
     message.style.display = "block";

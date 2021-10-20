@@ -12,17 +12,20 @@ body{
     display:flex;
     flex-direction: column;
     width: 80vw;
-    background-color: rgb(112, 73, 14);
+    background-color: rgb(95, 62, 12);
 }
 input{
     width: 25vw;
+    background-color: rgb(199, 222, 243);;
 }
-button{
+#check-button{
     min-width:fit-content;
     max-width: 5rem;
+    background-color: rgb(25, 44, 61);
+    color: rgb(199, 222, 243);
 
 }
-table{
+.change-table{
     padding: 1rem;
     border: 4px double rgb(163, 149, 149);
 }
@@ -37,6 +40,11 @@ td{
     text-align: center;
 }
 tr:nth-child(even){
-    background-color: rgb(37, 85, 70);
-    color:aliceblue;
+    background-color: rgb(34, 33, 33);
+    color:rgb(199, 222, 243);
 }
+tr:nth-child(odd){
+    font-size: xx-large;
+    color:rgb(202, 225, 245);
+}
+
